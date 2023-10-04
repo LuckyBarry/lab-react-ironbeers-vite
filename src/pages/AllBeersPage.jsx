@@ -11,7 +11,7 @@ function AllBeersPage() {
         if (response.ok) {
             const allBeers = await response.json()
             setBeers(allBeers)
-            console.log(allBeers)
+            // console.log(allBeers)
         }
     }
 
@@ -27,7 +27,7 @@ function AllBeersPage() {
                         <p>{item.name}</p>
                         <p>{item.tagline}</p>
                         <p>{item.contributed_by}</p>
-                        <Link to={`/beers/${item._id}/update`}>About Page</Link>
+                        <Link to={`/beers/${item._id}`}>About Page</Link>
                     </li>)
 
                 )
